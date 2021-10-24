@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView img;
     private Spinner spinner;
     private String category;
+    private downloadHelper downloadhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +33,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         img = (ImageView) findViewById(R.id.imagePet);
-        downloadHelper downloadhelper = new downloadHelper();
-        downloadhelper.download(img);
+        downloadhelper = new downloadHelper();
 
         spinner = (Spinner)findViewById(R.id.spinner);
 
@@ -58,19 +58,9 @@ public class MainActivity extends AppCompatActivity {
     public void handleClick(View view) throws IOException {
         switch (view.getId()){
             case R.id.buttonFindpet:
-                getimage();
+                downloadhelper.download(img);
         }
 
-    }
-
-    public void getimage() throws IOException {
-        String imageUrl= "https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg";
-
-        InputStream is = new java.net.URL(imageUrl).openStream();
-        Bitmap imag = BitmapFactory.decodeStream(is);
-
-        img.setImageBitmap(imag );
-//
     }
 
     public static Drawable LoadImageFromWebOperations(String url) {
