@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "271130176689",
+    "project_id": "patronus-329903",
+    "storage_bucket": "patronus-329903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271130176689:android:131da47f3d29edcc958690",
+        "android_client_info": {
+          "package_name": "edu.gatech.seclass.protronusapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271130176689-b0m5i98fl7g2n9bap4nbn3j9taeigljt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZYCAOfmIpbiHNxK_Yp_QS2Fk_ehdugCI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271130176689-b0m5i98fl7g2n9bap4nbn3j9taeigljt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

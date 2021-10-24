@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        img = (ImageView)findViewById(R.id.imagePet);
+        img = (ImageView) findViewById(R.id.imagePet);
+        downloadHelper downloadhelper = new downloadHelper();
+        downloadhelper.download(img);
 
     }
 
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         Bitmap imag = BitmapFactory.decodeStream(is);
 
         img.setImageBitmap(imag );
+//
     }
 
     public static Drawable LoadImageFromWebOperations(String url) {
