@@ -30,32 +30,73 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="405dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="3dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="282dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Fur Baby:"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="338dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="404dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="507dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.0">
 
         <Button
             android:id="@+id/buttonFindpet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
             android:layout_weight="1"
             android:onClick="handleClick"
-            android:text="Find My Pet"
-            android:textSize="16sp" />
+            android:text="Where is my pet?" />
     </LinearLayout>
 
     <ImageView
         android:id="@+id/imagePet"
-        android:layout_width="262dp"
-        android:layout_height="265dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="266dp"
+        android:layout_height="327dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="53dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="143dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:srcCompat="@tools:sample/avatars"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,9 +7,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,6 +23,8 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView img;
+    private Spinner spinner;
+    private String category;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
         img = (ImageView) findViewById(R.id.imagePet);
         downloadHelper downloadhelper = new downloadHelper();
         downloadhelper.download(img);
+
+        spinner = (Spinner)findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+                this, R.array.category, android.R.layout.simple_spinner_item
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View selectedItemView, int position, long id) {
+                category = parent.getItemAtPosition(position).toString();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {}
+        });
 
     }
 

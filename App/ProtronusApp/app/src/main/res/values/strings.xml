@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ProtronusApp</string>
+    <string-array name="category">
+        <item>Dog</item>
+        <item>Cat</item>
+        <item>Bird</item>
+        <item>Mouse</item>
+    </string-array>
 </resources>
